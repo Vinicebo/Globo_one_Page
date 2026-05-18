@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vinícius · One Page Globo</title>
+
+<!-- Fonte Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --ciano: #00BCD4;
+    --azul: #005CAB;
+    --violeta: #4A3CCF;
+    --offwhite: #F0F2F5;
+    --branco: #FFFFFF;
+    --texto: #1A1A1A;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--offwhite);
+    color: var(--texto);
+    line-height: 1.65;
+}
+
+h2 {
+    text-transform: lowercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    font-size: 1.7rem;
+}
+
+/* HEADER */
+header {
+    height: 360px;
+    padding: 50px 20px;
+    color: var(--branco);
+    text-align: center;
+
+    background: linear-gradient(120deg, var(--ciano), var(--azul), var(--violeta));
+    background-size: 260% 260%;
+    animation: gradiente 9s ease-in-out infinite;
+}
+
+@keyframes gradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header img {
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+header p {
+    opacity: 0.9;
+    margin-top: 6px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* SECTION BLOCK CARD */
+.card {
+    background: var(--branco);
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+    margin-bottom: 45px;
+}
+
+.block-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.block-text {
+    margin-bottom: 22px;
+}
+
+/* GRID */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+}
+
+@media (max-width: 820px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LISTA */
+.list {
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 7px;
+}
+
+/* FOOTER */
+.rainbow {
+    display: flex;
+    height: 6px;
+}
+
+.r1 { background: var(--ciano); flex: 1; }
+.r2 { background: var(--azul); flex: 1; }
+.r3 { background: var(--violeta); flex: 1; }
+
+footer {
+    text-align: center;
+    padding: 22px;
+    font-size: 0.9rem;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="logo_globo-corporativa_principal_gradiente.png" alt="globo">
+    <h1>Olá, sou vinícius</h1>
+    <p>estudante de engenharia da computação · ibmec · 5º período</p>
+</header>
+
+<div class="container">
+
+<!-- QUEM SOU EU -->
+<section class="card">
+    <div class="block-title">quem sou eu</div>
+    <p class="block-text">
+        Estudante de Engenharia da Computação, orientado à prática e à aplicação real da tecnologia. 
+        Busco entender profundamente como sistemas funcionam — especialmente a integração entre hardware e software.
+    </p>
+</section>
+
+<!-- MINHA TRAJETÓRIA -->
+<section class="card">
+    <div class="block-title">minha trajetória</div>
+
+    <div class="grid-2">
+        <div>
+            <h3 class="section-subtitle">formação acadêmica</h3>
+            <p>
+                Engenharia da Computação (Ibmec RJ).  
+                Interesse em arquitetura de sistemas, linguagens de baixo nível e engenharia aplicada.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="section-subtitle">visão técnica</h3>
+            <p>
+                Experiência com sistemas físicos e embarcados, onde falhas têm consequências reais — reforçando a importância da confiabilidade.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- PROJETOS RELEVANTES -->
+<section class="card">
+    <div class="block-title">projetos relevantes</div>
+
+    <div class="grid-2">
+        <div>
+            <h3 class="section-subtitle">robótica e embarcados</h3>
+            <ul class="list">
+                <li>prototipagem com Arduino</li>
+                <li>controle físico e automação</li>
+                <li>programação em C e C++</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="section-subtitle">aplicações em IA</h3>
+            <ul class="list">
+                <li>classificação de produtos</li>
+                <li>visão computacional</li>
+                <li>tratamento de imagens</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICAÇÕES -->
+<section class="card">
+    <div class="block-title">certificações</div>
+    <ul class="list">
+        <li>IoT e Sistemas Embarcados</li>
+        <li>Desenvolvimento Web</li>
+        <li>Desenvolvimento Front-end</li>
+        <li>Métodos de estudo: Pomodoro e revisões espaçadas</li>
+    </ul>
+</section>
+
+<!-- MOTIVAÇÃO -->
+<section class="card">
+    <div class="block-title">motivação</div>
+    <p>
+        Curiosidade técnica, foco em engenharia robusta e aprendizado por tentativa e erro.  
+        Meu objetivo é trabalhar com sistemas complexos criando soluções escaláveis e confiáveis.
+    </p>
+</section>
+
+<!-- DEVOPS & SRE -->
+<section class="card">
+    <div class="block-title">conexão com devops & sre</div>
+
+    <div class="grid-2">
+        <div>
+            <h3 class="section-subtitle">por que essa área?</h3>
+            <ul class="list">
+                <li>integra engenharia, automação e confiabilidade</li>
+                <li>ambiente ideal para pensamento sistêmico</li>
+                <li>alta escala e impacto real</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="section-subtitle">como posso contribuir</h3>
+            <ul class="list">
+                <li>automação de pipelines CI/CD</li>
+                <li>observabilidade e monitoramento</li>
+                <li>infraestrutura como código</li>
+                <li>resolução de problemas complexos</li>
+                <li>mentalidade de confiabilidade</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section class="card">
+    <div class="block-title">contato</div>
+    <p><strong>vinícius da luz</strong></p>
+    <p>Email: <a href="mailto:viniciusdaluzlcp@gmail.com">viniciusdaluzlcp@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/vinícius-daluz7">linkedin.com/in/vinícius-daluz7</a></p>
+</section>
+
+</div>
+
+<!-- FOOTER -->
+<div class="rainbow">
+    <span class="r1"></span>
+    <span class="r2"></span>
+    <span class="r3"></span>
+</div>
+
+<footer>
+    one page criada para o processo seletivo estagiar globo 2026
+</footer>
+
+</body>
+</html>
